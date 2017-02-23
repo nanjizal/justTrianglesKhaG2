@@ -14,4 +14,3 @@ justTriangles example with Kha g2.
 - Change to a Parrot!
 - Think about justTriangles in relation to Kha g2 streamlining.
 - Add G4 demo.
-- Ask about smoothing / resolution.
