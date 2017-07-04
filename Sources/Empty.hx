@@ -36,22 +36,21 @@ class Empty {
     }
     public function draw(){
         Draw.drawTri = Triangle.drawTri;
-        Draw.colorFill_id = 2;
-        Draw.colorLine_id = 2;
-        Draw.colorLine_id = 2;
-        Draw.extraFill_id = 2;
         var thick = 4;
         var ctx = new PathContext( 1, 500, 0, 100 );
+        ctx.setColor( 2, 2 );
+        ctx.setThickness( thick );
         ctx.lineType = TriangleJoinCurve; // - default
         var pathTrace = new PathContextTrace();
         var p = new SvgPath( ctx );
         p.parse( bird_d, 0, 0 );
-        ctx.render( thick, false ); 
-        Draw.colorFill_id = 5;
-        Draw.colorLine_id = 5;
-        Draw.extraFill_id = 5;
+        ctx.render( thick, false );
+        ctx.setColor( 5, 5 );
+        ctx.setThickness( 4 ); 
         var ctx2 = new PathContext( 1, 500, 0, 0 );
         ctx2.lineType = TriangleJoinCurve; // - default
+        ctx2.setColor( 5, 5 );
+        ctx2.setThickness( 4 ); 
         var p2 = new SvgPath( ctx2 );
         var c: Int ;
         var pos = 0;
